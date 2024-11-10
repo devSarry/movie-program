@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { loadStripe, type Stripe } from '@stripe/stripe-js';
 	import { onMount } from 'svelte';
-	import { PUBLIC_STRIPE_KEY, PUBLIC_BTC_DONATION_ADDRESS } from '$env/static/public';
+	import { PUBLIC_STRIPE_KEY } from '$env/static/public';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Input } from '$lib/components/ui/input/index.js';
 	import Icon from '@iconify/svelte';
 	import { gsap } from 'gsap';
-	import QRCode from 'qrcode';
 
 	let stripePromise: Promise<Stripe | null> | undefined;
 	let amount: any = $state();
@@ -17,19 +16,11 @@
 	onMount(() => {
 		// Load Stripe and generate BTC QR code on mount
 		stripePromise = loadStripe(PUBLIC_STRIPE_KEY);
-		generateBtcQrCode();
 
 		// Animate elements on load
 		animateElements();
 	});
 
-	async function generateBtcQrCode() {
-		try {
-			btcQrCode = await QRCode.toDataURL(PUBLIC_BTC_DONATION_ADDRESS);
-		} catch (err) {
-			console.error('Error generating QR code:', err);
-		}
-	}
 
 	function animateElements() {
 		gsap.fromTo(
@@ -106,7 +97,7 @@
 						<span>Donate</span>
 						<Icon
 							icon="mdi:send"
-							class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:rotate-45"
+							class="h-5 w-5"
 						/>
 					</div>
 				</Button>
@@ -117,34 +108,12 @@
 			{#each prices as price}
 				<Button
 					variant="success"
-					class="donate-button transition-transform md:hover:scale-105"
+					class="donate-button transition-transform"
 					on:click={() => (amount = price)}
 				>
 					$ {price}
 				</Button>
 			{/each}
-		</div>
-
-		<div class="donate-button mt-10 border-t pt-5 text-center">
-			<div class="flex items-center justify-center gap-1">
-				<p class="text-2xl font-bold">Or, send bitcoin.</p>
-				<Icon icon="mdi:bitcoin" class="h-10 w-10" />
-			</div>
-
-			<a
-				href={`https://mempool.space/address/${PUBLIC_BTC_DONATION_ADDRESS}`}
-				class="my-2 block text-sm">{PUBLIC_BTC_DONATION_ADDRESS}</a
-			>
-
-			{#if btcQrCode}
-				<a href={`https://mempool.space/address/${PUBLIC_BTC_DONATION_ADDRESS}`}>
-					<img
-						src={btcQrCode}
-						alt="BTC Donation QR Code"
-						class="mx-auto my-5 h-40 w-40 rounded-lg border shadow"
-					/>
-				</a>
-			{/if}
 		</div>
 	</main>
 </div>

@@ -3,8 +3,8 @@
 
 
 export const siteInfo = {
-	name: "spatz2",
-	email: "engage_intellect@protonmail.com",
+	name: "Cue",
+	email: "jsarry@gmail.com",
 }
 
 export const services = [
@@ -36,22 +36,6 @@ export const services = [
 			"Overactive bladder"
 		]	
 	},
-
-	{
-		name: "Open AI",
-		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/512px-ChatGPT_logo.svg.png",
-		coming_soon: false,
-		description: "OpenAI is an artificial intelligence research lab consisting of the for-profit OpenAI LP and the non-profit OpenAI Inc. that aims to ensure that artificial general intelligence benefits all of humanity.",	
-		use_cases: [
-			"Temporary smoothing of facial wrinkles and improving your appearance",
-			"Severe underarm sweating",
-			"Cervical dystonia",
-			"Eye twitching",
-			"Chronic migraines",
-			"Overactive bladder"
-		]
-	},
-
 
 	{
 		name: "Tailwind CSS",
@@ -100,26 +84,6 @@ export const services = [
 			"Overactive bladder"
 		]	
 	},
-
-	// {
-	// 	name: "Stem Cells",
-	// 	img: stemCellImage,
-	// 	coming_soon: true,
-	// 	description: "An advanced treatment that uses stem cells to repair, regenerate, and rejuvenate tissues for improved skin health and appearance.",	
-	// 	use_cases: [
-	// 		"Temporary smoothing of facial wrinkles and improving your appearance",
-	// 		"Severe underarm sweating",
-	// 		"Cervical dystonia",
-	// 		"Eye twitching",
-	// 		"Chronic migraines",
-	// 		"Overactive bladder"
-	// 	]	
-	// 	},
-
-
-	
-
-
 ]
 
 

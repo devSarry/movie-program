@@ -19,7 +19,7 @@
 				duration: 3,
 				ease: 'power4.out'
 			}
-		} || {},
+		},
 		children
 	}: Props = $props();
 

@@ -5,12 +5,13 @@
 	import Hero from '$lib/components/marketing/Hero.svelte';
 	import Stats from '$lib/components/marketing/Stats.svelte';
 	import About from '$lib/components/marketing/About.svelte';
-	import FeaturesFeed from '$lib/components/ui/FeaturesFeed.svelte';
-	import GettingStarted from '$lib/components/marketing/GettingStarted.svelte';
-	import Contribute from '$lib/components/marketing/Contribute.svelte';
+	import TopMoviesFeed from '$lib/components/ui/TopMoviesFeed.svelte';
+
 	import { animateMainStagger } from '$lib/animations';
 
 	let hidden = $state(true);
+
+	let { topMovies } = $props();
 
 	let stars = $state(0),
 		issues = $state(0),
@@ -18,6 +19,7 @@
 
 	const getStars = async () => {
 		const res = await fetch(`${PUBLIC_BASE_URL}/api/repo-data`);
+		console.log(res);
 		const { stars: fetchedStars, issues: fetchedIssues, forks: fetchedForks } = await res.json();
 		stars = fetchedStars;
 		issues = fetchedIssues;
@@ -47,15 +49,11 @@
 			<About />
 		</div>
 		<div class="animate-item">
-			<FeaturesFeed />
-		</div>
-		<div class="animate-item">
-			<GettingStarted />
+			<TopMoviesFeed />
 		</div>
 
-		<div class="animate-item">
-			<Contribute />
-		</div>
+
+
 	</div>
 </div>
 

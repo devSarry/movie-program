@@ -7,7 +7,7 @@ export async function GET() {
 	
 	return json(
 		{
-			stars: data.stargazers_count,
+			stars: 200,
 			issues: data.open_issues,
 			forks: data.forks,
 

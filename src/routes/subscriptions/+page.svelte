@@ -29,6 +29,8 @@
 		hidden = false;
 		animateMainStagger();
 	});
+
+	console.log(data.existingSubscriptions)
 </script>
 
 <main
@@ -44,6 +46,7 @@
 
 	{#if data.existingSubscriptions && data.existingSubscriptions.length > 0}
 		<div class="mt-5 flex flex-col items-center justify-between gap-5">
+			<pre>{JSON.stringify(data?.existingSubscriptions[0]?.plan)}</pre>
 			<div class="animate-item text-center text-lg text-muted-foreground">
 				You are currently subscribed to the <span class="text-foreground"
 					>{data?.existingSubscriptions[0]?.plan?.interval}ly</span

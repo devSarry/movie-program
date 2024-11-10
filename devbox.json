@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6/.schema/devbox.schema.json",
+  "packages": [
+    "pocketbase@latest",
+    "nodejs@22"
+  ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true"
+  },
+  "shell": {
+
+    "scripts": {
+      "dev": [
+        "pnpm run dev"
+      ],
+      "pb": [
+        "pocketbase serve"
+      ],
+      "pb:migrate": [
+        "pocketbase migrate"
+      ]
+    }
+  }
+}

@@ -8,6 +8,8 @@ import { stripe } from '$lib/stripe';
 export const load: LayoutServerLoad = async ({ locals }) => {
 	const subs = await stripe.subscriptions.list();
 
+	console.log(subs)
+
 	const user = await stripe.customers.list({
 		email: locals?.pb?.authStore?.model?.email,
 		limit: 1

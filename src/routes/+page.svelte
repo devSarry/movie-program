@@ -9,6 +9,7 @@
 	}
 
 	let { data }: Props = $props();
+
 </script>
 
 <svelte:head>
@@ -26,7 +27,7 @@
 		<!-- IF USER IS LOGGED IN -->
 	{:else}
 		<div>
-			<SpatzMarketing />
+			<SpatzMarketing  />
 		</div>
 	{/if}
 </div>
