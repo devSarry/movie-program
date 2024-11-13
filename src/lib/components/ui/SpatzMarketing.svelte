@@ -11,8 +11,6 @@
 
 	let hidden = $state(true);
 
-	let { topMovies } = $props();
-
 	let stars = $state(0),
 		issues = $state(0),
 		forks = $state(0);

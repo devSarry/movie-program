@@ -13,8 +13,6 @@
 		}
 	});
 
-	topMoves
-
 </script>
 
 <Animate>

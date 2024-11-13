@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 }
 
 export const actions = {
-	default: async ({ request }) => {
+	search: async ({ request }) => {
 		const data = await request.formData();
 		console.log(data)
 		const query = data.get('query') as string;
