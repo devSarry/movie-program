@@ -1,9 +1,11 @@
 
 <script lang="ts">
   import * as Card from "$lib/components/ui/card";
+
+  let { title } = $props();
 </script>
 
-<Card.Root>
+<Card.Root class="snap-start my-3">
   <Card.Content>
     <div class="grid grid-cols-3 gap-2 mt-4 items-center">
       <div class="col-span-1">
@@ -14,7 +16,7 @@
         />
       </div>
       <div>
-        <h3 class="text-xl font-semibold">Movie Title</h3>
+        <h3 class="text-xl font-semibold">Movie Title {title}</h3>
         <p class="text-sm text-muted-foreground">2023</p>
       </div>
       <div>

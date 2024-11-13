@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 	import { onMount, tick } from 'svelte';
-	import SignGuestbookButton from '$lib/components/ui/SignGuestbookButton.svelte';
+	import AddMovieButton from '$lib/components/ui/AddMovieButton.svelte';
 	import Hero from '$lib/components/marketing/Hero.svelte';
 	import Stats from '$lib/components/marketing/Stats.svelte';
 	import About from '$lib/components/marketing/About.svelte';
@@ -34,20 +34,12 @@
 	});
 </script>
 
-<div class={`${hidden ? 'opacity-0' : ''} animate-item mx-auto w-full max-w-2xl px-2 md:px-0`}>
+<div class={`${hidden ? 'opacity-0' : ''} mx-auto w-full max-w-2xl px-2 md:px-0`}>
 	<div class="mb-10 flex flex-col gap-16 md:gap-16">
 		<div class="">
 			<Hero />
 		</div>
-		<div class="animate-item">
-			<Stats {stars} {issues} {forks} />
-		</div>
-		<div class="animate-item">
-			<SignGuestbookButton />
-		</div>
-		<div class="animate-item">
-			<About />
-		</div>
+		<About />
 		<div class="animate-item">
 			<TopMoviesFeed />
 		</div>

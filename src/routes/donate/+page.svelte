@@ -24,15 +24,9 @@
 
 	function animateElements() {
 		gsap.fromTo(
-			'.donate-card',
+			'.movie-card',
 			{ opacity: 0, y: 20, scale: 0.95 },
 			{ opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power4.out', delay: 0.1 }
-		);
-
-		gsap.fromTo(
-			'.donate-button',
-			{ opacity: 0, scale: 0.95 },
-			{ opacity: 1, scale: 1, duration: 2.5, ease: 'power4.out', stagger: 0.1 }
 		);
 	}
 

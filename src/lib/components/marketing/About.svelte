@@ -8,36 +8,20 @@
 </script>
 
 <main class="flex flex-col h-screen">
-	<ScrollArea scrollPosition={4} class="h-2/3 overflow-y-scroll">
+	<ScrollArea scrollPosition={4} class="h-2/3 overflow-y-scroll mb-7">
 		<div class="p-4">
 
-			<MovieCard />
-			<Separator class="my-2" />
-
-			<MovieCard />
-			<Separator class="my-2" />
-
-			<MovieCard />
-			<Separator class="my-2" />
-
-			<MovieCard />
-			<Separator class="my-2" />
-
-
-			<MovieCard />
-			<Separator class="my-2" />
-
-
-			<MovieCard />
-			<Separator class="my-2" />
-			<MovieCard />
-			<Separator class="my-2" />
-			<MovieCard />
-			<Separator class="my-2" />
-			<MovieCard />
-			<Separator class="my-2" />
-			<MovieCard />
-
+			<MovieCard title={1} />
+			<MovieCard title={2} />
+			<MovieCard title={3} />
+			<MovieCard title={4} />
+			<MovieCard title={5} />
+			<MovieCard title={6} />
+			<MovieCard title={7} />
+			<MovieCard title={8} />
+			<MovieCard title={9} />
+			<MovieCard title={10} />
+			<MovieCard title={11} />
 
 		</div>
 	</ScrollArea>
