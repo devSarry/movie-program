@@ -7,8 +7,8 @@
 	import { AddMovieDialog } from '$lib/components/add-movie-dialog';
 </script>
 
-<main class="flex flex-col h-screen">
-	<ScrollArea scrollPosition={4} class="h-2/3 overflow-y-scroll mb-7">
+<div class="flex flex-col">
+	<ScrollArea scrollPosition={4} class="h-[364px] md:h-[425px] overflow-y-scroll mb-7">
 		<div class="p-4">
 
 			<MovieCard title={1} />
@@ -26,4 +26,4 @@
 		</div>
 	</ScrollArea>
 	<AddMovieDialog />
-</main>
+</div>
