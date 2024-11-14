@@ -25,8 +25,13 @@
       selectedMovie: null
   })
 
-  let selectedDate: string = '';
-  let selectedTime: string = '';
+  let selectedMovieTime = $state<{
+    date: string,
+    time: string
+  }>({
+    date: '',
+    time: ''
+  })
 
   const animateMoviePosters = () => {
     gsap.fromTo(
@@ -177,7 +182,7 @@
                 type="date"
                 id="date"
                 name="date"
-                bind:value={selectedDate}
+                bind:value={selectedMovieTime.date}
                 class="col-span-1 p-2 border rounded-md w-full"
                 required
               />
@@ -188,7 +193,7 @@
                 type="time"
                 id="time"
                 name="time"
-                bind:value={selectedTime}
+                bind:value={selectedMovieTime.time}
                 class="col-span-1 p-2 border rounded-md w-full"
                 required
               />
